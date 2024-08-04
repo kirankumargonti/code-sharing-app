@@ -1,0 +1,121 @@
+@import 'variables';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  background-image: $gradient;
+  background-repeat: no-repeat;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+#root,
+#__next {
+  isolation: isolate;
+}
+
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  &-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    height: 100%;
+  }
+  .container {
+    padding: 10px;
+    text-align: center;
+    &-logo img {
+      margin: auto;
+    }
+  }
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: $text-color;
+}
+
+h2 {
+  font-size: 2rem;
+  color: $text-color;
+}
+
+select {
+  border: 0;
+  padding: 5px 10px;
+  border: 2px solid $select-background-color;
+  background-color: $select-background-color;
+  border-radius: 33px;
+  color: $select-text-color;
+  font-size: 12px;
+  cursor: pointer;
+  font-weight: 400;
+  option {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 400;
+  }
+}
+
+button {
+  user-select: none;
+  border: 0;
+  outline: 0;
+  background-color: $button-color;
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  font-size: 1rem;
+  color: $white-color;
+  border-radius: 33px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  .button-icon {
+    width: 20px;
+    position: relative;
+    height: 20px;
+  }
+  &:hover {
+    background-color: #2755fd;
+  }
+}
+.disable-btn {
+  background-color: $select-text-color !important;
+  cursor: not-allowed;
+}

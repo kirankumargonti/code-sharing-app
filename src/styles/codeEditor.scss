@@ -1,0 +1,122 @@
+@import 'variables';
+
+.code-editor-wrapper {
+  box-shadow: $box-shadow-color;
+  width: $editor-width;
+  height: $editor-height;
+  padding: 1rem 0 1.875rem;
+  border-radius: 0.625rem;
+  margin: 0 0.625rem;
+  margin: 15px 0;
+  background-color: $white-color;
+
+  @media screen and (max-width: 1200px) {
+    width: 960px;
+    height: 31.25rem;
+  }
+
+  @media screen and (max-width: 960px) {
+    width: 768px;
+    height: 31.25rem;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 576px;
+    height: 31.25rem;
+  }
+
+  @media screen and (max-width: 576px) {
+    width: 450px;
+    height: 32.25rem;
+
+    section {
+      height: 85% !important;
+    }
+  }
+  @media screen and (max-width: 450px) {
+    width: 320px;
+    height: 32.25rem;
+  }
+
+  // Editor filters section
+  .editor-filters {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1.25rem;
+    flex-wrap: wrap;
+
+    &-container {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      @media screen and (max-width: 576px) {
+        justify-content: space-between;
+        margin-bottom: 10px;
+      }
+    }
+    &-actions {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1em;
+      @media screen and (max-width: 576px) {
+        width: 100%;
+        justify-content: space-between;
+      }
+
+      .link {
+        display: flex;
+        align-items: center;
+        color: $select-text-color;
+        cursor: pointer;
+        &-image {
+          width: 20px;
+          height: 20px;
+          position: relative;
+          margin-right: 5px;
+        }
+        p {
+          font-size: 0.625rem;
+        }
+      }
+    }
+    @media screen and (max-width: 576px) {
+      padding: 0 0.25rem;
+      justify-content: space-between;
+      &-container {
+        width: 450px;
+        gap: 5px;
+      }
+    }
+  }
+}
+
+.code-editor-dark-color {
+  background-color: $editor-dark-color !important;
+}
+
+.view-code {
+  display: grid;
+  place-content: center;
+  text-align: center;
+  padding: 50px 10px;
+  background-color: $white-color;
+  .container-logo {
+    img {
+      margin: auto;
+    }
+  }
+  .no-snippet-found {
+    padding: 10px 0;
+    display: grid;
+    place-content: center;
+    p {
+      margin: 20px 0;
+      font-weight: 600;
+    }
+  }
+  @media screen and (max-width: 576px) {
+    padding: 10px;
+  }
+}
